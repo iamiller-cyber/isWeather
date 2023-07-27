@@ -63,6 +63,15 @@ body {
   text-align: left;
   align-items: center;
 }
+#details > div > .info > .feelsLikeDataC {
+  opacity: 0;
+}
+
+#details > div > .info > .feelsLikeDataF {
+  position: relative;
+  top: -16px;
+  opacity: 0;
+}
 
 #details > div > .info > div + div {
   margin-top: -2em;

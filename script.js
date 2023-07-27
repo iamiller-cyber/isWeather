@@ -9,9 +9,13 @@ function switchDailyIcon() {
 function switchDegrees() {
   const degreesC = document.getElementById("degreesC");
   const degreesF = document.getElementById("degreesF");
+  const feelsLikeC = document.querySelector(".feelsLikeDataC");
+  const feelsLikeF = document.querySelector(".feelsLikeDataF");
 
   degreesC.classList.toggle("active");
   degreesF.classList.toggle("active");
+  feelsLikeC.classList.toggle("active");
+  feelsLikeF.classList.toggle("active");
 }
 async function fetchWeather(loc) {
   try {
@@ -22,10 +26,12 @@ async function fetchWeather(loc) {
     console.log(url);
     let data = await url.json();
     console.log(data);
+    const dailyIcon = document.querySelector(".dailyIcon");
     const degreesC = document.getElementById("degreesC");
     const degreesF = document.getElementById("degreesF");
     degreesC.textContent = `${data.current.temp_c} °C`;
     degreesF.textContent = `${data.current.temp_f} °F`;
+    dailyIcon.src = data.current.condition.icon;
   } catch {
     console.log(error);
   }
@@ -48,5 +54,7 @@ function displayWeather(data) {
   degreesC.textContent = `${data.current.temp_c}°C`;
   degreesF.textContent = `${data.current.temp_f}°F`;
   city.textContent = `${data.location.name}, ${data.location.region}`;
-  country.textContent = `${data.location.country}`;
+  country.textContent = data.location.country;
+  date.textContent = data.current.last_updated;
+  chanceRain = data;
 }
