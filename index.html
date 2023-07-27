@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>isWeather</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="today">
+      <div id="highlights">
+        <div id="condition">Clear Sky</div>
+        <div id="degreesF" class="active">38°F</div>
+        <div id="degreesC">3°C</div>
+        <div id="switchDegrees">Display C</div>
+        <div class="dailyIcon"></div>
+      </div>
+      <div id="center">
+        <div id="location">
+          <div id="city">New York</div>
+          <div id="country">United States</div>
+        </div>
+        <div id="date">Tuesday, 25th July '23, 4:13pm</div>
+        <div id="searchbox">
+          <input type="text" placeholder="Search Location..." />
+          <div id="search"></div>
+          <div id="getThreeDay">Three Day Forecast</div>
+        </div>
+      </div>
+      <div id="details">
+        <div id="chanceRain">
+          <div class="icon">
+            <img src="assets/SVG/rain.svg" alt="rain icon" />
+          </div>
+          <div class="info">
+            <div class="label">Chance of Rain</div>
+            <div class="chanceOfRainData">71%</div>
+          </div>
+        </div>
+        <div id="humidity">
+          <div class="icon">
+            <img src="assets/SVG/humidity.svg" alt="humidity icon" />
+          </div>
+          <div class="info">
+            <div class="label">Humidity</div>
+            <div class="humidityData">59%</div>
+          </div>
+        </div>
+        <div id="feelsLike">
+          <div class="icon">
+            <img src="assets/SVG/temp.svg" alt="temperature icon" />
+          </div>
+          <div class="info">
+            <div class="label">Feels like</div>
+            <div class="feelsLikeData">43</div>
+          </div>
+        </div>
+        <div id="wind">
+          <div class="icon">
+            <img src="assets/SVG/wind.svg" alt="gust of wind" />
+          </div>
+          <div class="info">
+            <div class="label">Wind speed</div>
+            <div class="windData">36</div>
+          </div>
+        </div>
+        <div id="aqi">
+          <div class="icon">
+            <img src="assets/SVG/aqi.svg" alt="a factory ruining your air" />
+          </div>
+          <div class="info">
+            <div class="label">Air Quality Index</div>
+            <div class="aqiData">27</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="threeDay">
+      <div id="tomorrow">
+        <div class="Day"></div>
+        <div class="degHigh"></div>
+        <div class="degLow"></div>
+        <div class="Icon"></div>
+      </div>
+      <div id="nextDay">
+        <div class="day"></div>
+        <div class="degHigh"></div>
+        <div class="degLow"></div>
+        <div class="icon"></div>
+      </div>
+    </div>
+  </body>
+</html>
